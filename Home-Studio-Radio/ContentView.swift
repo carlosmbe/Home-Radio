@@ -25,15 +25,15 @@ struct ContentView: View {
             }//List Ends Here
             .navigationDestination(for: NavItem.self){ itemDes in
                 
-                if itemDes.name == "Home"{
+                if itemDes.enumOption == .home{
                     HomeView()
                 }
                     
-                if itemDes.name == "Record Audio"{
+                if itemDes.enumOption == .voiceMode{
                     VoiceMode()
                 }
                 
-                if itemDes.name == "Set List"{
+                if itemDes.enumOption == .setList{
                     SetListView()
                 }
                 
@@ -50,45 +50,6 @@ struct ContentView: View {
         
         
         
-    }
-}
-
-struct NavItem: Hashable, Identifiable{
-    var id = UUID()
-    var name : String
-    var iconName : String
-    
-    
-    static func defaultOptions() -> [NavItem]{
-        var items = [NavItem]()
-        
-        let home = NavItem(name: "Home",
-                           iconName: "house")
-        
-        let audio = NavItem(name: "Record Audio",
-                            iconName: "mic")
-        
-        let setList = NavItem(name: "Set List",
-                              iconName: "radio")
-        
-        items = [home, audio,setList]
-        
-        return items
-    }
-}
-
-struct NavView: View {
-    
-    var item: NavItem
-    
-    
-    var body: some View {
-        HStack{
-            Image(systemName: item.iconName)
-                .foregroundColor(.accentColor)
-            Text(item.name)
-        }
-        .padding()
     }
 }
 

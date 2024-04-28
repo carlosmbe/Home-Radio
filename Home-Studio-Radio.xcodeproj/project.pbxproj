@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6732BBE2BDE99C8003CB43D /* NavigationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6732BBD2BDE99C8003CB43D /* NavigationModels.swift */; };
+		B6732BC02BDE9BD8003CB43D /* SetListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6732BBF2BDE9BD8003CB43D /* SetListModel.swift */; };
+		B6A84EDD2BDC0E8A00D8B605 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A84EDC2BDC0E8A00D8B605 /* HomeView.swift */; };
+		B6A84EDF2BDC0ECA00D8B605 /* VoiceMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A84EDE2BDC0ECA00D8B605 /* VoiceMode.swift */; };
+		B6A84EE12BDC0ED600D8B605 /* SetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A84EE02BDC0ED600D8B605 /* SetListView.swift */; };
 		B6FDC24B2BCF183F0078B73D /* Home_Studio_RadioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDC24A2BCF183F0078B73D /* Home_Studio_RadioApp.swift */; };
 		B6FDC24D2BCF183F0078B73D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDC24C2BCF183F0078B73D /* ContentView.swift */; };
 		B6FDC24F2BCF18400078B73D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FDC24E2BCF18400078B73D /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6732BBD2BDE99C8003CB43D /* NavigationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModels.swift; sourceTree = "<group>"; };
+		B6732BBF2BDE9BD8003CB43D /* SetListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetListModel.swift; sourceTree = "<group>"; };
+		B6A84EDC2BDC0E8A00D8B605 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B6A84EDE2BDC0ECA00D8B605 /* VoiceMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMode.swift; sourceTree = "<group>"; };
+		B6A84EE02BDC0ED600D8B605 /* SetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetListView.swift; sourceTree = "<group>"; };
 		B6FDC2472BCF183F0078B73D /* Home-Studio-Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home-Studio-Radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FDC24A2BCF183F0078B73D /* Home_Studio_RadioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_Studio_RadioApp.swift; sourceTree = "<group>"; };
 		B6FDC24C2BCF183F0078B73D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +43,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6732BC12BDE9BE0003CB43D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6732BBD2BDE99C8003CB43D /* NavigationModels.swift */,
+				B6732BBF2BDE9BD8003CB43D /* SetListModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6732BC22BDE9BF9003CB43D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6A84EDC2BDC0E8A00D8B605 /* HomeView.swift */,
+				B6A84EDE2BDC0ECA00D8B605 /* VoiceMode.swift */,
+				B6A84EE02BDC0ED600D8B605 /* SetListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B6FDC23E2BCF183F0078B73D = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +83,8 @@
 			children = (
 				B6FDC24A2BCF183F0078B73D /* Home_Studio_RadioApp.swift */,
 				B6FDC24C2BCF183F0078B73D /* ContentView.swift */,
+				B6732BC22BDE9BF9003CB43D /* Views */,
+				B6732BC12BDE9BE0003CB43D /* Models */,
 				B6FDC24E2BCF18400078B73D /* Assets.xcassets */,
 				B6FDC2532BCF18400078B73D /* Home_Studio_Radio.entitlements */,
 				B6FDC2502BCF18400078B73D /* Preview Content */,
@@ -139,6 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6732BC02BDE9BD8003CB43D /* SetListModel.swift in Sources */,
+				B6A84EDD2BDC0E8A00D8B605 /* HomeView.swift in Sources */,
+				B6A84EE12BDC0ED600D8B605 /* SetListView.swift in Sources */,
+				B6A84EDF2BDC0ECA00D8B605 /* VoiceMode.swift in Sources */,
+				B6732BBE2BDE99C8003CB43D /* NavigationModels.swift in Sources */,
 				B6FDC24D2BCF183F0078B73D /* ContentView.swift in Sources */,
 				B6FDC24B2BCF183F0078B73D /* Home_Studio_RadioApp.swift in Sources */,
 			);
@@ -287,6 +323,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosmbe.Home-Studio-Radio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -314,6 +353,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosmbe.Home-Studio-Radio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
