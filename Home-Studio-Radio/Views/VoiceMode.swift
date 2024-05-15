@@ -5,11 +5,57 @@
 //  Created by Carlos Mbendera on 26/04/2024.
 //
 
+
 import SwiftUI
 
 struct VoiceMode: View {
-    var body: some View {
     
+    @ObservedObject private var audioBox = AudioBox()
+    
+    @State var isRecording = false
+    
+    var body: some View {
+      
+        
+        VStack{
+            VoiceHeaderView()
+
+            RecordStopButtons()
+            
+            Button("Open CAF File"){
+                NSWorkspace.shared.open(audioBox.URLForRec)
+            }
+            
+        }
+        .onAppear{
+            audioBox.setUpRecorder()
+        }
+        .padding()
+        .navigationTitle("Record Audio")
+    }
+    
+    
+    private func RecordStopButtons() -> some View{
+        
+        Button(action: {
+            if isRecording{
+                isRecording.toggle()
+                audioBox.stop()
+            }else{
+                isRecording.toggle()
+                audioBox.record()
+            }
+        })
+        {
+            Image(systemName: isRecording ? "stop.circle" : "mic.circle")
+                .resizable()
+                .frame(width: 60, height: 60)
+                .foregroundColor(isRecording ? .red : .green)
+        }
+        
+    }
+    
+    private func VoiceHeaderView() -> some View{
         HStack{
             
             Image(systemName: "mic")
@@ -23,12 +69,12 @@ struct VoiceMode: View {
             Image(systemName: "mic")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-           
-               
         }
-        .padding()
-        .navigationTitle("Record Audio")
     }
+    
+    
+    
+    
 }
 
 #Preview {
